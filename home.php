@@ -27,6 +27,7 @@ h1 {letter-spacing: 6px}
       <a href="index2.php" class="w3-bar-item w3-button">CUSTOMERS</a>
       <a href="PTABLE.php" class="w3-bar-item w3-button">PRODUCTS</a>
       <a href="UTABLE.php" class="w3-bar-item w3-button w3-hide-small">USERS</a>
+      <a href="InvoiceHeader.php" class="w3-bar-item w3-button w3-hide-small">INVOICE</a>
       <a href="logout.php" class="w3-bar-item w3-button w3-light-grey">LOGOUT</a>
     </div>
   </div>

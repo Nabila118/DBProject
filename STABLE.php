@@ -19,7 +19,7 @@ if(!isset($_SESSION['userName']))
 <!DOCTYPE html>
 <html>
 <head>
-	ad>
+	
    <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +31,12 @@ if(!isset($_SESSION['userName']))
 
 <div id='cssmenu'>
 <ul>
-   <li class='active'><a href='home.php'>Home</a></li>
-   <li><a href='STABLE.php'>Sales Person</a></li>
+   <li ><a href='home.php'>Home</a></li>
+   <li class='active'><a href='STABLE.php'>Sales Person</a></li>
    <li><a href='index2.php'>Customer Table</a></li>
    <li><a href='PTABLE.php'>Product Table</a></li>
    <li><a href='UTABLE.php'>User Table</a></li>
+   <li><a href='InvoiceHeader.php'>Invoice</a></li>
 </ul>
 </div>
 <?php 
