@@ -1,6 +1,6 @@
 <?php
 	session_start();	
-	$db=mysqli_connect('localhost', 'root', '','mysql');
+	$db=mysqli_connect('localhost', 'nabila', 'nabila118','Nabila');
 		
 		$id="";
 		$sname="";
@@ -39,16 +39,20 @@
 	
 	
 	
-	mysqli_query($db, "UPDATE CUSTOMERTABLE 
-	SET sname = '$sname', cname = '$cname', cno = '$cno', address = '$address', area = '$area', gc = '$gc' WHERE id = $id");
+	if(!mysqli_query($db, "UPDATE CUSTOMERTABLE 
+	SET sname = '$sname', cname = '$cname', cno = '$cno', address = '$address', area = '$area', gc = '$gc' WHERE id = '$id'"))
+	$_SESSION['message']= mysqli_error($db);
+	else
 	$_SESSION['message']="SAVED!";
 	header('location: index2.php');
 		}
 
 	if (isset($_GET['del'])){
 	$id = $_GET['del'];
-	mysqli_query($db, "DELETE FROM CUSTOMERTABLE WHERE id=$id");
-	$_SESSION['message']="SAVED!";
+	if(!mysqli_query($db, "DELETE FROM CUSTOMERTABLE WHERE id='$id'"))
+		$_SESSION['message']= mysqli_error($db);
+	else
+		$_SESSION['message']="SAVED!";
 	header('location: index2.php');
 	}
 

@@ -1,6 +1,6 @@
 <?php
 	//session_start();	
-	$db=mysqli_connect('localhost', 'root', '','mysql');
+	$db=mysqli_connect("localhost","nabila", "nabila118", "Nabila");
 		
 		$id="";
 		$Item_ID="";
@@ -16,8 +16,10 @@
 	
 	$query= "INSERT INTO INVOICE_13113
 	(InvoiceID, Item_ID, QUANTITY) VALUES ( '$invid','$Item_ID', $QUANTITY)";
-	mysqli_query($db, $query);
+	if(mysqli_query($db, $query))
 	$_SESSION['message']="SAVED!";
+	else
+		$_SESSION['message']=mysqli_error($db);
 	header('location: InvoiceHeader.php');
 		}
 
@@ -31,7 +33,7 @@
 	SET Item_ID = '$Item_ID', QUANTITY= $QUANTITY, WHERE id = '$id'");
 	$_SESSION['message']="UPDATED!";
 	header('location: InvoiceHeader.php');
-		}
+	}
 
 	if (isset($_GET['del'])){
 	$id = $_GET['del'];

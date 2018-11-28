@@ -53,11 +53,12 @@
       <th>AMOUNT</th>
 </tr>
 					<?php
-					$results = mysqli_query($db, "SELECT I.InvoiceID,P.id AS ITEMNAME, P.BRAND, I.QUANTITY, P.SALES_PRICE, P.SALES_PRICE*I.QUANTITY AS TOTAL FROM INVOICE_13113 I, PRODUCT P WHERE I.InvoiceID='$invid' AND I.Item_ID = P.id");
+					$results = mysqli_query($db, "SELECT I.id, I.InvoiceID,P.id AS ITEMNAME, P.BRAND, I.QUANTITY, P.SALES_PRICE, P.SALES_PRICE*I.QUANTITY AS TOTAL FROM INVOICE_13113 I, PRODUCT P WHERE I.InvoiceID='$invid' AND I.Item_ID = P.id");
 						
 					while ($row = mysqli_fetch_array($results)) { ?>
 
     <tr>
+
       <td><?php echo $row['InvoiceID']; ?></td>
       <td><?php echo $row['ITEMNAME']; ?></td>
       <td><?php echo $row['BRAND']; ?></td>
@@ -66,7 +67,7 @@
       <td><?php echo $row['TOTAL']; ?></td>
       
       <td>
-        <a href="invoice.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+        <a href="InvoiceHeader.php?edit=<?php echo $row['id'];?>" class="edit_btn" >Edit</a>
       
         <a href="server_invoice.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
       </td>

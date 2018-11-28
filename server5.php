@@ -1,6 +1,6 @@
 <?php
 	session_start();	
-	$db=mysqli_connect('localhost', 'root', '','mysql');
+	$db=mysqli_connect("localhost","nabila", "nabila118", "Nabila");
 		
 		$id="";
 		$userName="";

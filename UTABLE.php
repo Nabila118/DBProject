@@ -36,7 +36,7 @@ if(!isset($_SESSION['userName']))
    <li><a href='index2.php'>Customer Table</a></li>
    <li><a href='PTABLE.php'>Product Table</a></li>
    <li class='active'><a href='UTABLE.php'>User Table</a></li>
-   <li><a href='InvoiceHeader.php'>INVOICE</a></li>
+   <li><a href='InvoiceHeader.php'>Invoice</a></li>
 </ul>
 </div>
 <?php 

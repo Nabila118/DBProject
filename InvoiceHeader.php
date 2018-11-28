@@ -34,7 +34,10 @@ if(!isset($_SESSION['userName']))
 									$sql = "SELECT id FROM CUSTOMERTABLE";
 									$result = mysqli_query($db, $sql);
 									echo "<select type = 'text' id = 'searchid' class = 'form-control'>";
-									echo "<option value= ''>SELECT CUSTOMER</option>";
+									if(isset($_GET[id]))
+										echo "<option value= '".$_GET[id]."'>".$_GET[id]."</option>";
+									else
+										echo "<option value= ''>SELECT CUSTOMER</option>";
 									while ($row = mysqli_fetch_array($result)) {
 										echo "<option value='" . $row['id'] ."'>" . $row['id'] ."</option>";
 									}

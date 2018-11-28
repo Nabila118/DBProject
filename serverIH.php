@@ -1,6 +1,6 @@
 <?php
 	session_start();	
-	$db=mysqli_connect('localhost', 'root', '','mysql');
+	$db=mysqli_connect("localhost","nabila", "nabila118", "Nabila");
 		
 		$id="";
 		//$DATE_CREATED='SYSDATE';
@@ -18,7 +18,7 @@
 	$query= "INSERT INTO INVOICE_HEADER_13113 
 	VALUES ('$id', SYSDATE() , '$CUSTOMER_ID')";
 	if(!mysqli_query($db, $query))
-		$_SESSION['message']="$DATE_CREATED";
+		$_SESSION['message']=mysqli_error($db);
 	else
 	$_SESSION['message']="SAVED!";
 	header('location: InvoiceHeader.php');
