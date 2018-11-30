@@ -22,6 +22,7 @@ if(!isset($_SESSION['userName']))
    <li><a href='PTABLE.php'>Product Table</a></li>
    <li><a href='UTABLE.php'>User Table</a></li>
    <li class='active'><a href='InvoiceHeader.php'>Invoice</a></li>
+   <li><a href='survey.php'>Survey</a></li>
 </ul>
 </div>
 	

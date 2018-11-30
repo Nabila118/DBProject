@@ -29,9 +29,11 @@
 		$QUANTITY = $_POST['QUANTITY'];
 		
 	
-	mysqli_query($db, "UPDATE INVOICE_13113 
-	SET Item_ID = '$Item_ID', QUANTITY= $QUANTITY, WHERE id = '$id'");
-	$_SESSION['message']="UPDATED!";
+	if(!mysqli_query($db, "UPDATE INVOICE_13113 
+	SET Item_ID = '$Item_ID', QUANTITY= $QUANTITY WHERE id = '$id'"))
+		$_SESSION['message']=mysqli_error($db);
+	else
+		$_SESSION['message']="UPDATED!";
 	header('location: InvoiceHeader.php');
 	}
 

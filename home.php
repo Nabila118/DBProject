@@ -28,6 +28,7 @@ h1 {letter-spacing: 6px}
       <a href="PTABLE.php" class="w3-bar-item w3-button">PRODUCTS</a>
       <a href="UTABLE.php" class="w3-bar-item w3-button w3-hide-small">USERS</a>
       <a href="InvoiceHeader.php" class="w3-bar-item w3-button w3-hide-small">INVOICE</a>
+      <a href="survey.php" class="w3-bar-item w3-button w3-hide-small">SURVEY</a>
       <a href="logout.php" class="w3-bar-item w3-button w3-light-grey">LOGOUT</a>
     </div>
   </div>
@@ -37,4 +38,52 @@ h1 {letter-spacing: 6px}
 
 
 </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChartJS - BarGraph</title>
+    <style type="text/css">
+      #chart-container {
+        width: 30%;
+        height: auto;
+        float:left;
+        clear:left;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="chart-container">
+      <canvas id="mycanvas"></canvas>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChartJS - PIE</title>
+    <style type="text/css">
+      #chart-container {
+        width: 30%;
+        height: auto;
+        float:right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart-container">
+      <canvas id="mycanvas"></canvas>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="./pieapp.js"></script>
+  </body>
 </html>
