@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//alert("dsad");
 	$.ajax({
-		url: "http://localhost/DBProject/piedata.php",
+		url: "piedata.php",
 		method: "GET",
 	success: function(data) {
 			console.log(data);

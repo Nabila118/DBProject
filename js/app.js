@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//alert("dsad");
 	$.ajax({
-		url: "http://localhost/DBProject/data.php",
+		url: "data.php",
 		method: "GET",
 	success: function(data) {
 			console.log(data);
