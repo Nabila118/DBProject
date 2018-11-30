@@ -45,10 +45,10 @@ h1 {letter-spacing: 6px}
     <title>ChartJS - BarGraph</title>
     <style type="text/css">
       #chart-container {
-        width: 30%;
+        width: 45%;
         height: auto;
-        float:left;
-        clear:left;
+        float:center;
+      
       }
 
     </style>
@@ -70,9 +70,10 @@ h1 {letter-spacing: 6px}
     <title>ChartJS - PIE</title>
     <style type="text/css">
       #chart-container {
-        width: 30%;
+        width: 45%;
         height: auto;
-        float:right;
+        margin: 0 auto !important;
+      
       }
     </style>
   </head>
